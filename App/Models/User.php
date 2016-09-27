@@ -5,13 +5,13 @@
 
 	class User
 	{
-		public static $table='users';
+		const TABLE='users';
 		
 		public $email;
 		public $name;
 		public static function findAll(){
 			$db=new \App\Db();
-			$users=$db->query('SELECT * FROM '.self::$table ,'App\Models\User');
+			$users=$db->query('SELECT * FROM '.self::TABLE ,'App\Models\User');
 			return $users;
 		}
 	}
