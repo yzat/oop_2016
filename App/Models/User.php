@@ -1,17 +1,13 @@
 <?php
 	namespace App\Models;
 
-	use App\Db;
+	use App\Model;
 
-	class User
+	class User extends Model
 	{
 		const TABLE='users';
 		
 		public $email;
 		public $name;
-		public static function findAll(){
-			$db=new \App\Db();
-			$users=$db->query('SELECT * FROM '.self::TABLE ,self::class);
-			return $users;
-		}
+		
 	}
